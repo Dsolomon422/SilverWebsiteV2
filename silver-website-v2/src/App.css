@@ -1,3 +1,167 @@
+/* Custom Fonts*/
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Book.ttf');
+  font-weight: 400;
+}
+
+/* Default CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+/* Navbar CSS*/
+/* Navbar Styles */
+.navbar {
+  background-color: #C0C0C0; /* Dull silver background */
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 50px; /* Adjust size as needed */
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-text {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spacing between elements */
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.vvd {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vvd:hover {
+  background-color: #666;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #C0C0C0; /* Dull silver background */
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 50px; /* Adjust size as needed */
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-text {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spacing between elements */
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.vvd {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vvd:hover {
+  background-color: #666;
+}
+
+/* Banner Styles */
+.banner {
+  background-color: #C0C0C0; /* Dull silver background */
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  color: black;
+  text-align: left;
+}
+
+.banner .container {
+  max-width: 900px;
+}
+
+.banner .tagline {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: black;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
 .App {
   text-align: center;
 }

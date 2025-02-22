@@ -7,7 +7,7 @@ export const NavBar = () => {
         <Navbar expand="lg">
         <Container>
             <Navbar.Brand href="#home">
-                <img className="navbar-brand-icon" src={logo} alt="logo" />
+                <img src={logo} alt="logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
                 <span className="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@ export const NavBar = () => {
                 <div className="social-icon">
                     <a href="#"><img src={navlogo1} alt="LinkedIn"/></a>
                 </div>
-                <button className="vvd">
+                <button href="https://form.typeform.com/to/VQ9lqaJt" className="vvd">
                     <span>Let's Connect</span>
                 </button>
             </span>

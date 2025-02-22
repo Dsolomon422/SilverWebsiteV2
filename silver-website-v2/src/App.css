@@ -23,11 +23,17 @@
 }
 
 html {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
@@ -36,17 +42,33 @@ body {
   font-family: 'Centra', sans-serif !important;
 }
 
+.content {
+  flex-grow: 1;
+}
+
+
 /* Navbar CSS*/
-/* Navbar Styles */
 .navbar {
   background-color: #C0C0C0; /* Dull silver background */
   padding: 10px 20px;
-}
-
-.navbar .container {
+  min-height: 10vh; /* Adjusted height for better ratio */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.navbar .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  margin-right: auto; /* Pushes the logo to the left */
 }
 
 .navbar-brand img {
@@ -54,53 +76,7 @@ body {
 }
 
 .navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.navbar-text {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Spacing between elements */
-}
-
-.social-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.vvd {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.vvd:hover {
-  background-color: #666;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #C0C0C0; /* Dull silver background */
-  padding: 10px 20px;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-brand img {
-  height: 50px; /* Adjust size as needed */
-}
-
-.navbar-collapse {
+  margin-left: auto; /* Pushes the button to the right */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -138,17 +114,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  height: 65vh;
   color: black;
   text-align: left;
 }
 
 .banner .container {
-  max-width: 900px;
+  max-width: 80%; /* Prevents overflow into the footer */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .banner .tagline {
-  font-size: 3rem;
+  font-size: 4vw;
   font-weight: bold;
   color: black;
   display: block;
@@ -156,87 +136,9 @@ body {
 }
 
 .banner p {
-  font-size: 1.2rem;
+  font-size: 1.4vw;
   color: black;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #C0C0C0; /* Dull silver background */
-  padding: 10px 20px;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-brand img {
-  height: 50px; /* Adjust size as needed */
-}
-
-.navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.navbar-text {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Spacing between elements */
-}
-
-.social-icon img {
-  width: 30px;
-  height: 30px;
-}
-
-.vvd {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.vvd:hover {
-  background-color: #666;
-}
-
-/* Banner Styles */
-.banner {
-  background-color: #C0C0C0; /* Dull silver background */
-  padding: 100px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70vh;
-  color: black;
-  text-align: left;
-}
-
-.banner .container {
-  max-width: 900px;
-}
-
-.banner .tagline {
-  font-size: 3rem;
-  font-weight: bold;
-  color: black;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.banner p {
-  font-size: 1.2rem;
-  color: black;
-  max-width: 800px;
+  max-width: 80%; /* Ensures proper text distribution */
   line-height: 1.6;
 }
 
@@ -250,10 +152,11 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: auto;
+  min-height: 30vh;
 }
 
 .footer-connect {
-  font-size: 2rem; /* Increased size */
+  font-size: 2.3vw; /* Increased size */
   color: C0C0C0;
   margin-bottom: 15px;
   font-weight: bold;
@@ -265,7 +168,7 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 1.2rem; /* Slightly increased font size */
+  font-size: 2vw; /* Slightly increased font size */
   cursor: pointer;
   transition: 0.3s;
 }
@@ -276,39 +179,4 @@ body {
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

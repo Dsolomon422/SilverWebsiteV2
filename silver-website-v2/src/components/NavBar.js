@@ -15,7 +15,7 @@ export const NavBar = () => {
             <Navbar.Collapse id="basic-navbar-nav">
             <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="#"><img src={navlogo1} alt="LinkedIn"/></a>
+                    <a href="https://www.linkedin.com/in/daniel-solomon-6310a11b1/"><img src={navlogo1} alt="LinkedIn"/></a>
                 </div>
                 <button onClick={() => window.open("https://form.typeform.com/to/VQ9lqaJt", "_blank")}  className="vvd">
                     <span>Let's Connect</span>

@@ -17,7 +17,7 @@ export const NavBar = () => {
                 <div className="social-icon">
                     <a href="#"><img src={navlogo1} alt="LinkedIn"/></a>
                 </div>
-                <button href="https://form.typeform.com/to/VQ9lqaJt" className="vvd">
+                <button onClick={() => window.open("https://form.typeform.com/to/VQ9lqaJt", "_blank")}  className="vvd">
                     <span>Let's Connect</span>
                 </button>
             </span>
